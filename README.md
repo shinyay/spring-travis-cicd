@@ -1,6 +1,6 @@
-# Name
+# Travis CI with Spring Boot
 
-Overview
+Continuous Integration / Continuous Delivery for Spring Boot
 
 ## Description
 
