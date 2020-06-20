@@ -4,6 +4,7 @@ plugins {
 	id("org.springframework.boot") version "2.3.1.RELEASE"
 	id("io.spring.dependency-management") version "1.0.9.RELEASE"
 	id("jacoco")
+	id("com.google.cloud.tools.jib") version "2.1.0"
 	kotlin("jvm") version "1.3.72"
 	kotlin("plugin.spring") version "1.3.72"
 }
@@ -43,4 +44,17 @@ tasks.test {
 }
 tasks.jacocoTestReport {
 	dependsOn(tasks.test)
+}
+
+jib {
+	from {
+		image = "openjdk:11-slim"
+	}
+	to {
+		image = "registry.hub.docker.com/shinyay/${project.name}"
+		tags = setOf("latest", "${project.version}")
+	}
+	container {
+		creationTime = "USE_CURRENT_TIMESTAMP"
+	}
 }
