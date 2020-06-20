@@ -6,6 +6,19 @@ Continuous Integration / Continuous Delivery for Spring Boot
 
 ## Demo
 
+### 1. Building Process in Travis CI
+
+- `.travis.yml` is located at repository;s root
+
+```yaml
+language: java
+jdk:
+  - openjdk11
+script:
+  - ./gradlew clean build
+```
+
+
 ## Features
 
 - feature:1
