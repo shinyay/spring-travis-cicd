@@ -18,6 +18,14 @@ script:
   - ./gradlew clean build
 ```
 
+### 2. Travis Settings
+
+- [Travis Settings](https://travis-ci.com/github/shinyay/spring-travis-cicd/settings)
+
+#### Environment Variables
+
+- DOCKER_PASSWORD
+- DOCKER_USERNAME
 
 ## Features
 
