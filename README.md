@@ -75,6 +75,15 @@ script:
 
 ![Environment Variables](images/travis-env-value.png)
 
+### 5. Code Analysis
+
+Analyze code using Jacoco and CodeCov.
+
+- Jacoco is coder ceverage library.
+- CodeCov will inform test coverage.
+
+  - [CodeCov](https://codecov.io/gh/shinyay/spring-travis-cicd)
+
 ## Features
 
 - feature:1
