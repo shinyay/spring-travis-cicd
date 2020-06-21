@@ -90,6 +90,8 @@ Analyze code using Jacoco and CodeCov.
 
 #### Jacoco Report Configuration
 
+Add the following configuration to build.gradle
+
 ```kotlin
 tasks.test {
 	finalizedBy(tasks.jacocoTestReport)
@@ -101,6 +103,15 @@ tasks.jacocoTestReport {
 	}
 	dependsOn(tasks.test)
 }
+```
+
+#### CodeCov and Jacoco Integration
+
+Add the following configuration to travis.yml
+
+```yaml
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
 ```
 
 ## Features
