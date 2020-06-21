@@ -4,8 +4,11 @@ Continuous Integration / Continuous Delivery for Spring Boot
 
 ## Description
 
-- [Travis CI Dashboard](https://travis-ci.com/github/shinyay/spring-travis-cicd)
+Travis CI manages continuous integration with Jacoco and CodeCov.
 
+- [Travis CI Dashboard](https://travis-ci.com/github/shinyay/spring-travis-cicd)
+- [CodeCov Dashboard](https://codecov.io/gh/shinyay/spring-travis-cicd)
+  
 ## Demo
 
 ### 1. Building Process in Travis CI
