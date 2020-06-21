@@ -49,6 +49,10 @@ jib {
 
 ### 3. Container Building Process in Travis CI
 
+Travis CI is a hosted Continuous Integration Service.
+
+- [Travis CI Build History](https://travis-ci.com/github/shinyay/spring-travis-cicd/builds)
+
 ```yaml
 language: java
 jdk:
@@ -79,10 +83,25 @@ script:
 
 Analyze code using Jacoco and CodeCov.
 
-- Jacoco is coder ceverage library.
+- Jacoco is coder coverage library.
 - CodeCov will inform test coverage.
 
   - [CodeCov](https://codecov.io/gh/shinyay/spring-travis-cicd)
+
+#### Jacoco Report Configuration
+
+```kotlin
+tasks.test {
+	finalizedBy(tasks.jacocoTestReport)
+}
+tasks.jacocoTestReport {
+	reports {
+		xml.isEnabled = true
+		html.isEnabled = true
+	}
+	dependsOn(tasks.test)
+}
+```
 
 ## Features
 
